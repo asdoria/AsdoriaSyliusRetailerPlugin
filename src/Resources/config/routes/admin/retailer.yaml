@@ -1,0 +1,86 @@
+asdoria_admin_retailer_group_retailers_index:
+    path: /{retailerGroupId}/retailers
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.retailer:indexAction
+        _sylius:
+            grid: asdoria_admin_retailer_group_retailers
+            vars:
+                retailerGroup: expr:notFoundOnNull(service('sylius.repository.retailer_group').find($retailerGroupId))
+                templates:
+                    breadcrumb: "@SyliusAdmin/RetailerGroup/Retailers/Crud/Index/_breadcrumb.html.twig"
+                route:
+                    parameters:
+                        retailerGroupId: $retailerGroupId
+            section: admin
+            template: 'SyliusAdminBundle:Crud:index.html.twig'
+
+asdoria_admin_retailer_group_retailers_create:
+    path: /{retailerGroupId}/retailers/new
+    methods: [GET, POST]
+    defaults:
+        _controller: sylius.controller.retailer:createAction
+        _sylius:
+            redirect:
+                route: asdoria_admin_retailer_group_retailers_index
+                parameters:
+                    retailerGroupId: $retailerGroupId
+            section: admin
+            template: '@SyliusAdmin/RetailerGroup/Retailers/Crud/create.html.twig'
+            factory:
+                method: createForRetailerGroup
+                arguments:
+                    - expr:notFoundOnNull(service('sylius.repository.retailer_group').find($retailerGroupId))
+            form:
+                type: App\Form\Type\RetailerType
+                options:
+                    validation_groups:
+                        - sylius
+            vars:
+                route:
+                    name: asdoria_admin_retailer_group_retailers_create
+                    parameters:
+                        retailerGroupId: $retailerGroupId
+                templates:
+                    form: '@SyliusAdmin/Retailer/_form.html.twig'
+
+asdoria_admin_retailer_group_retailers_update:
+    path: /{retailerGroupId}/retailers/{id}/edit
+    methods: [GET, PUT]
+    defaults:
+        _controller: sylius.controller.retailer:updateAction
+        _sylius:
+            redirect:
+                route: asdoria_admin_retailer_group_retailers_index
+                parameters:
+                    retailerGroupId: $retailerGroupId
+            section: admin
+            template: '@SyliusAdmin/RetailerGroup/Retailers/Crud/update.html.twig'
+            form:
+                type: App\Form\Type\RetailerType
+                options:
+                    validation_groups:
+                        - sylius
+            vars:
+                route:
+                    name: asdoria_admin_retailer_group_retailers_update
+                    parameters:
+                        retailerGroupId: $retailerGroupId
+                        id: $id
+                templates:
+                    form: '@SyliusAdmin/Retailer/_form.html.twig'
+
+asdoria_admin_retailer_group_retailers_delete:
+    path: /{retailerGroupId}/retailers/{id}
+    methods: [DELETE]
+    defaults:
+        _controller: sylius.controller.retailer:deleteAction
+        _sylius:
+            redirect:
+                route: asdoria_admin_retailer_group_retailers_index
+                parameters: {retailerGroupId: $retailerGroupId}
+            section: admin
+            vars:
+                route:
+                    parameters:
+                        retailerGroupId: $retailerGroupId

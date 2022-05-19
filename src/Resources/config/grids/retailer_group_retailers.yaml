@@ -1,0 +1,68 @@
+sylius_grid:
+    grids:
+        asdoria_admin_retailer_group_retailers:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%asdoria.model.retailer.class%"
+                    repository:
+                        method: createListQueryBuilder
+                        arguments: [$retailerGroupId]
+            fields:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: name
+                code:
+                    type: string
+                    label: sylius.ui.code
+                    sortable: code
+                city:
+                    type: string
+                    label: sylius.ui.city
+                    sortable: city
+                postcode:
+                    type: string
+                    label: sylius.ui.postcode
+                    sortable: postcode
+                country_code:
+                    type: string
+                    label: sylius.ui.country_code
+                    sortable: country_code
+                retailerGroup:
+                    type: twig
+                    label: asdiria.ui.retailer_group
+                    sortable: retailerGroup
+                    options:
+                        template: "@AsdoriaSyliusRetailerPlugin/Grid/Field/retailer_group.html.twig"
+            actions:
+                main:
+                    create:
+                        type: create
+                        options:
+                            link:
+                                route: sylius_admin_retailer_group_retailers_create
+                                parameters:
+                                    retailerGroupId: $retailerGroupId
+                item:
+                    update:
+                        type: update
+                        options:
+                            link:
+                                route: asdoria_admin_retailer_group_retailers_update
+                                parameters:
+                                    id: resource.id
+                                    retailerGroupId: $retailerGroupId
+                    delete:
+                        type: delete
+                        options:
+                            link:
+                                route: sylius_admin_retailer_group_retailers_delete
+                                parameters:
+                                    id: resource.id
+                                    retailerGroupId: $retailerGroupId
+            filters:
+                search:
+                    type: string
+                    label: sylius.ui.search
+

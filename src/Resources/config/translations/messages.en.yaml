@@ -1,0 +1,29 @@
+asdoria:
+    menu:
+        admin:
+            main:
+                retailers:
+                    header: Magasins
+    ui:
+        retailer_groups: Enseignes
+        retailer_group: Enseigne
+        new_retailer_group: Nouvelle enseigne
+        edit_retailer_group: Modifier l'enseigne
+        retailers: Magasins
+        new_retailer: Nouveaux magasins
+        edit_retailer: Modifier le magasin
+        manage_retailers: Gérer les magasins
+    form:
+        retailer:
+            channel: Section
+            retailer_group: Enseigne
+            latitude: Latitude
+            longitude: Longitude
+            name: Nom
+            url: URL
+            product_variants: Variantes de produit
+            mail: E-mail
+            coords:
+                regex: Cette valeur devrait être une coordonnée GPS
+        retailer_group:
+            rating: Note

@@ -1,0 +1,6 @@
+asdoria_admin_retailer_groupe:
+    resource: "admin/retailer_group.yaml"
+
+asdoria_admin_retailer_groupe:
+    resource: "admin/retailer.yaml"
+    prefix: /retailer-groups

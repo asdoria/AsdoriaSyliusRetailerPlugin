@@ -1,0 +1,4 @@
+asdoria:
+    facet:
+        code:
+            within_facet_filter_unique: Ce code doit être unique au sein de cette gestions de filtres.
