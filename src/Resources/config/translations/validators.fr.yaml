@@ -1,4 +1,7 @@
 asdoria:
-    facet:
-        code:
-            within_facet_filter_unique: Ce code doit être unique au sein de cette gestions de filtres.
+    ui:
+        retailer_group:
+            name:
+                unique: Ce nom est déjà utilisé !
+            path:
+                not_blank: Le chemin ne peut pas être vide.

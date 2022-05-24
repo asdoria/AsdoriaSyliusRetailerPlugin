@@ -3,7 +3,7 @@
 {% set vars = configuration.parameters.get('vars') %}
 
 {% set breadcrumbs = [
-        { label: 'sylius.ui.administration'|trans, url: path('asdoria_admin_dashboard') },
+        { label: 'sylius.ui.administration'|trans, url: path('sylius_admin_dashboard') },
         { label: 'asdoria.ui.retailer_groups'|trans , url: path('asdoria_admin_retailer_group_index')},
         { label:  vars.retailerGroup.name , url: path('asdoria_admin_retailer_group_update', { 'id': vars.retailerGroup.id })},
         { label: (metadata.applicationName~'.ui.'~metadata.pluralName)|trans },

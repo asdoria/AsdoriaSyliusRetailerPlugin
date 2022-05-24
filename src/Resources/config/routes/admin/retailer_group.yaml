@@ -1,8 +1,8 @@
-sylius_admin_retailer_group:
+asdoria_admin_retailer_group:
     resource: |
         alias: asdoria.retailer_group
         section: admin
-        templates: SyliusAdminBundle:Crud
+        templates: "@SyliusAdmin\\Crud"
         except: ['show']
         redirect: index
         grid: asdoria_admin_retailer_group

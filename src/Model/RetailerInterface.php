@@ -6,6 +6,7 @@ declare(strict_types=1);
 namespace Asdoria\SyliusRetailerPlugin\Model;
 
 
+use Sylius\Component\Resource\Model\CodeAwareInterface;
 use Sylius\Component\Resource\Model\ResourceInterface;
 
 /**
@@ -14,7 +15,7 @@ use Sylius\Component\Resource\Model\ResourceInterface;
  *
  * @author  Philippe Vesin <pve.asdoria@gmail.com>
  */
-interface RetailerInterface extends ResourceInterface
+interface RetailerInterface extends ResourceInterface, CodeAwareInterface
 {
 
 }

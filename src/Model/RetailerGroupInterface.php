@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Asdoria\SyliusRetailerPlugin\Model;
 
-use App\Traits\ResourceTrait;
-use App\Traits\RetailersTrait;
+use Sylius\Component\Core\Model\ImageAwareInterface;
 use Sylius\Component\Resource\Model\ResourceInterface;
 
 
@@ -14,15 +13,13 @@ use Sylius\Component\Resource\Model\ResourceInterface;
  *
  * @author Philippe Vesin <pve.asdoria@gmail.com>
  */
-interface RetailerGroupInterface extends ResourceInterface
-{ 
+interface RetailerGroupInterface extends
+    ResourceInterface,
+    ImageAwareInterface
+{
     /**
-     * @return int
+     * @return string|null
      */
-    public function getRating(): int;
+    public function getPath(): ?string;
 
-    /**
-     * @param int $rating
-     */
-    public function setRating(int $rating): void;
 }

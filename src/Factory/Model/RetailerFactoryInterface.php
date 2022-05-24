@@ -6,7 +6,7 @@ declare(strict_types=1);
 namespace Asdoria\SyliusRetailerPlugin\Factory\Model;
 
 
-use Asdoria\SyliusRetailerPlugin\Model\RetailerInterface;
+use Asdoria\SyliusRetailerPlugin\Model\RetailerGroupInterface;
 use Asdoria\SyliusRetailerPlugin\Model\RetailerInterface;
 use Sylius\Component\Resource\Factory\FactoryInterface;
 
@@ -23,5 +23,5 @@ interface RetailerFactoryInterface extends FactoryInterface
      *
      * @return RetailerInterface
      */
-    public function createForGroup(RetailerGroupInterface $group): RetailerInterface;
+    public function createForRetailerGroup(RetailerGroupInterface $group): RetailerInterface;
 }

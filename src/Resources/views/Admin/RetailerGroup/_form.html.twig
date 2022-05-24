@@ -1,7 +1,9 @@
-{% form_theme form '@SyliusAdmin/Form/imagesTheme.html.twig' %}
-
+{% form_theme form '@AsdoriaSyliusRetailerPlugin/Form/imagesTheme.html.twig' %}
 {{ form_errors(form) }}
 <div class="ui segment">
     {{ form_row(form.name) }}
-    {{ form_row(form.rating) }}
+    <div class="field" id="sylius_retailer_group_image">
+        <label class="required"> {{ 'sylius.ui.image'|trans }}</label>
+        {{ form_widget(form.image, {'label': false}) }}
+    </div>
 </div>

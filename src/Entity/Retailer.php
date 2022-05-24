@@ -9,6 +9,8 @@ namespace Asdoria\SyliusRetailerPlugin\Entity;
 use Asdoria\SyliusRetailerPlugin\Model\RetailerInterface;
 use Asdoria\SyliusRetailerPlugin\Traits\CodeTrait;
 use Asdoria\SyliusRetailerPlugin\Traits\NamingTrait;
+use Asdoria\SyliusRetailerPlugin\Traits\ResourceTrait;
+use Asdoria\SyliusRetailerPlugin\Traits\RetailerGroupTrait;
 
 /**
  * Class Retailer
@@ -20,6 +22,8 @@ class Retailer implements RetailerInterface
 {
     use NamingTrait;
     use CodeTrait;
+    use ResourceTrait;
+    use RetailerGroupTrait;
     protected ?string $street = null;
     protected ?string $city = null;
     protected ?string $countryCode = null;

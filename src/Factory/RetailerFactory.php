@@ -5,10 +5,8 @@ declare(strict_types=1);
 
 namespace Asdoria\SyliusRetailerPlugin\Factory;
 
-use Asdoria\SyliusRetailerPlugin\Entity\RetailerTypeProductAttribute;
-use Asdoria\SyliusRetailerPlugin\Entity\RetailerTypeProductOption;
-use Asdoria\SyliusRetailerPlugin\Entity\RetailerTypeTaxon;
 use Asdoria\SyliusRetailerPlugin\Factory\Model\RetailerFactoryInterface;
+use Asdoria\SyliusRetailerPlugin\Model\RetailerGroupInterface;
 use Asdoria\SyliusRetailerPlugin\Model\RetailerInterface;
 
 /**
@@ -41,11 +39,11 @@ class RetailerFactory implements RetailerFactoryInterface
     }
 
     /**
-     * @param RetailerInterface $facetFilter
+     * @param RetailerGroupInterface $group
      *
      * @return RetailerInterface
      */
-    public function createForGroup(RetailerGroupInterface $group): RetailerInterface
+    public function createForRetailerGroup(RetailerGroupInterface $group): RetailerInterface
     {
         $retailer = $this->createNew();
         $retailer->setRetailerGroup($group);

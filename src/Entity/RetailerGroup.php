@@ -6,7 +6,9 @@ declare(strict_types=1);
 namespace Asdoria\SyliusRetailerPlugin\Entity;
 
 
+use Asdoria\SyliusRetailerPlugin\Model\RetailerGroupImageInterface;
 use Asdoria\SyliusRetailerPlugin\Model\RetailerGroupInterface;
+use Asdoria\SyliusRetailerPlugin\Traits\ImageTrait;
 use Asdoria\SyliusRetailerPlugin\Traits\NamingTrait;
 use Asdoria\SyliusRetailerPlugin\Traits\ResourceTrait;
 use Asdoria\SyliusRetailerPlugin\Traits\RetailersTrait;
@@ -22,27 +24,25 @@ class RetailerGroup implements RetailerGroupInterface
     use ResourceTrait;
     use RetailersTrait;
     use NamingTrait;
-
-    /** @var int */
-    protected int $rating = 0;
+    use ImageTrait;
 
     public function __construct() {
         $this->initializeRetailersCollection();
     }
 
     /**
-     * @return int
+     * @return null|string
      */
-    public function getRating(): int
+    public function getPath(): ?string
     {
-        return $this->rating;
+        if (!$this->getImage() instanceof RetailerGroupImageInterface) {
+            return null;
+        }
+
+        return $this->getImage()->getPath();
     }
 
-    /**
-     * @param int $rating
-     */
-    public function setRating(int $rating): void
-    {
-        $this->rating = $rating;
-    }
+
+
+
 }

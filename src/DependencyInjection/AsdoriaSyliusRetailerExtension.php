@@ -34,7 +34,6 @@ final class AsdoriaSyliusRetailerExtension  extends AbstractResourceExtension im
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         $this->registerResources('asdoria', $config['driver'], $config['resources'], $container);
-        $container->setParameter('asdoria.facet_filter.options', $config['options']);
         $loader->load('services.yaml');
     }
 
