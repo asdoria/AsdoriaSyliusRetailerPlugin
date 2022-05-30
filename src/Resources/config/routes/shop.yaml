@@ -1,0 +1,10 @@
+asdoria_shop_retailer_ajax:
+    resource: "shop/ajax/*.yaml"
+    prefix: /ajax
+
+asdoria_shop_retailer_index:
+    path: /retailers
+    methods: [GET]
+    defaults:
+        _controller: Asdoria\SyliusRetailerPlugin\Controller\Shop\RetailersController
+    

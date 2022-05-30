@@ -1,0 +1,3 @@
+asdoria_shop_retailer_ajax_retailers:
+    resource: "ajax/retailer.yaml"
+    prefix: /retailers

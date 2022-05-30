@@ -1,0 +1,13 @@
+Asdoria\SyliusRetailerPlugin\Entity\RetailerGroup:
+    exclusion_policy: ALL
+    xml_root_name: retailer_group
+    properties:
+        id:
+            expose: true
+            type: integer
+            xml_attribute: true
+            groups: [Default, Detailed, Autocomplete]
+    virtual_properties:
+        getName:
+            serialized_name: name
+            groups: [Default, Detailed, DetailedCart, Autocomplete]

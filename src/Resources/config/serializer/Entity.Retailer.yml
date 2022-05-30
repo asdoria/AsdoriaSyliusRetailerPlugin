@@ -1,0 +1,37 @@
+Asdoria\SyliusRetailerPlugin\Entity\Retailer:
+    exclusion_policy: ALL
+    xml_root_name: retailer
+    properties:
+        id:
+            expose: true
+            type: integer
+            xml_attribute: true
+            groups: [Default, Detailed, Autocomplete]
+        postcode:
+            expose: true
+            type: string
+            groups: [Default, Detailed]
+        street:
+            expose: true
+            type: string
+            groups: [Default, Detailed]
+        city:
+            expose: true
+            type: string
+            groups: [Default, Detailed]
+        retailerGroup:
+            expose: true
+            type: string
+            groups: [Default, Detailed]
+        latitude:
+            expose: true
+            type: string
+            groups: [Default, Detailed]
+        longitude:
+            expose: true
+            type: string
+            groups: [Default, Detailed]
+    virtual_properties:
+        getName:
+            serialized_name: name
+            groups: [Default, Detailed, DetailedCart, Autocomplete]

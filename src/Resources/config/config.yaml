@@ -1,0 +1,23 @@
+imports:
+    - "grids/**/*.yaml"
+
+
+framework:
+    assets:
+        packages:
+            asdoria_sylius_retailer_plugin:
+                base_path: '/bundles/asdoriasyliusretailerplugin'
+
+sylius_ui:
+    events:
+        asdoria.shop.index_retailer.stylesheets:
+            blocks:
+                comparator:
+                    template: "@AsdoriaSyliusRetailerPlugin/Shop/_stylesheets.html.twig"
+                    priority: 5
+                    
+        asdoria.shop.index_retailer.javascripts:
+            blocks:
+                comparator:
+                    template: "@AsdoriaSyliusRetailerPlugin/Shop/_javascripts.html.twig"
+                    priority: 5

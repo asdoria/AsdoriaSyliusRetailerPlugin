@@ -1,0 +1,57 @@
+sylius_grid:
+    grids:
+        asdoria_admin_retailer_group:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%asdoria.model.retailer_group.class%"
+            fields:
+                
+                image:
+                    type: twig
+                    label: sylius.ui.image
+                    path: .
+                    options:
+                        template: "@AsdoriaSyliusRetailerPlugin/Admin/Grid/Field/retailer_group_image.html.twig"
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: name
+            actions:
+                main:
+                    create:
+                        label: asdoria.ui.retailer_groups_create
+                        type: create
+                item:
+                    update:
+                        label: asdoria.ui.edit
+                        type: update
+                    delete:
+                        label: asdoria.ui.delete
+                        type: delete
+                    manage:
+                        type: default
+                        label: asdoria.ui.manage_retailers
+                        icon: cubes
+                        options:
+                            link:
+                                route: asdoria_admin_retailer_group_retailers_index
+                                parameters:
+                                    retailerGroupId: resource.id
+
+#                        type: link
+#                        label: asdopria.ui.manage_retailers
+#                        icon: cubes
+#                        options:
+#                            link:
+#                                retailers:
+#                                    label: asdoria.ui.manage_retailers
+#                                    route: asdoria_admin_retailer_group_retailers_index
+#                                    parameters:
+#                                        retailerGroupId: resource.id
+            filters:
+                search:
+                    type: string
+                    label: sylius.ui.search
+                    options:
+                        fields: [name]

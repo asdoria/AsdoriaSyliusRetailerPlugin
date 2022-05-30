@@ -1,0 +1,29 @@
+parameters:
+    asdoria.form.type.retailer.validation_groups: [sylius]
+    asdoria.form.type.retailer_group.validation_groups: [sylius]
+    asdoria.form.type.retailer_group_image.validation_groups: [sylius]
+
+services:
+    asdoria.form.retailer_group.class:
+        class: Asdoria\SyliusRetailerPlugin\Form\Type\RetailerGroupType
+        arguments:
+            $dataClass: '%asdoria.model.retailer_group.class%'
+            $validationGroups: '%asdoria.form.type.retailer_group.validation_groups%'
+        tags:
+            - { name: form.type }
+                
+    asdoria.form.retailer.class:
+        class: Asdoria\SyliusRetailerPlugin\Form\Type\RetailerType
+        arguments:
+            $dataClass: '%asdoria.model.retailer.class%'
+            $validationGroups: '%asdoria.form.type.retailer.validation_groups%'
+        tags:
+            - { name: form.type }
+    
+    asdoria.form.retailer_group_image.class:
+        class: Asdoria\SyliusRetailerPlugin\Form\Type\RetailerGroupImageType
+        arguments:
+            $dataClass: '%asdoria.model.retailer_group_image.class%'
+            $validationGroups: '%asdoria.form.type.retailer_group_image.validation_groups%'
+        tags:
+            - { name: form.type }

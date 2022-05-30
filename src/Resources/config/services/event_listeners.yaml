@@ -1,0 +1,9 @@
+services:
+    asdoria.listener.retailer_group_upload:
+        parent: sylius.listener.avatar_upload
+        autowire: true
+        autoconfigure: false
+        public: false
+        tags:
+            - { name: kernel.event_listener, event: asdoria.retailer_group.pre_create, method: uploadImage }
+            - { name: kernel.event_listener, event: asdoria.retailer_group.pre_update, method: uploadImage }

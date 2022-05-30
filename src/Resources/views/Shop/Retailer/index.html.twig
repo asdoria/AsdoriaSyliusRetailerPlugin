@@ -1,0 +1,29 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{%- block title %}{{ 'asdoria.ui.shop_retailers'|trans }}{% endblock -%}
+
+{% block robots %}
+    <meta name="robots" content="none">
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ sylius_template_event('asdoria.shop.index_retailer.stylesheets') }}
+{% endblock %}
+
+{% block content %}
+    {% set config = {
+        'ajaxRoute' : path('asdoria_shop_ajax_retailer_index', {'postCode': 0}),
+        'default' : {
+            'latitude' : 45.564601,
+            'longitude' : 5.917781,
+        }
+    }
+    %}
+    <div id="app" data-config="{{ config|serialize }}"></div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ sylius_template_event('asdoria.shop.index_retailer.javascripts') }}
+{% endblock %}

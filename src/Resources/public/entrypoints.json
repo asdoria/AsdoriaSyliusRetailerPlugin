@@ -1,0 +1,20 @@
+{
+  "entrypoints": {
+    "admin-retailer": {
+      "css": [
+        "/bundles/asdoriasyliusretailerplugin/admin-retailer.min.css"
+      ],
+      "js": [
+        "/bundles/asdoriasyliusretailerplugin/admin-retailer.min.js"
+      ]
+    },
+    "shop-retailer": {
+      "css": [
+        "/bundles/asdoriasyliusretailerplugin/shop-retailer.min.css"
+      ],
+      "js": [
+        "/bundles/asdoriasyliusretailerplugin/shop-retailer.min.js"
+      ]
+    }
+  }
+}

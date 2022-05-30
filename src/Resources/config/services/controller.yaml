@@ -1,0 +1,5 @@
+services:
+    Asdoria\SyliusRetailerPlugin\Controller\Shop\RetailersController:
+        public: true
+        arguments:
+            $twig: '@twig'

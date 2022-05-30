@@ -1,0 +1,14 @@
+Asdoria\SyliusRetailerPlugin\Entity\RetailerGroup:
+    constraints:
+        -  Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+               fields: [name]
+               groups: [sylius]
+               message: 'asdoria.ui.retailer_group.name.unique'
+    properties:
+        name:
+            - NotBlank:
+                  groups: [sylius]
+                  message: 'asdoria.ui.retailer_group.name.not_blank'
+        image:
+             - Valid:
+                   groups: [sylius]
