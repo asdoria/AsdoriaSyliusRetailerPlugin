@@ -17,17 +17,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.6.0",
-    "semantic-ui-css": "^2.4.1"
+    "@vue-leaflet/vue-leaflet": "^0.3.0",
+    "axios": "^0.27.2",
+    "leaflet": "^1.8.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-vue": "^0.11.0",
+    "vue": "^3.2.36",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.10.3",
     "@babel/runtime": "^7.13.10",
     "@babel/runtime-corejs2": "^7.13.10",
     "@symfony/webpack-encore": "^1.1.2",
+    "@vue-leaflet/vue-leaflet": "^0.6.1",
     "postcss": "^8.2.9",
     "postcss-loader": "^5.2.0",
     "sass": "^1.32.8",
-    "sass-loader": "^11.0.1"
+    "sass-loader": "^11.0.1",
+    "vue-loader": "^16.7.0",
+    "vue-template-compiler": "^2.6.14"
   }
 }
