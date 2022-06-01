@@ -2,6 +2,18 @@ asdoria:
     ui:
         retailer_group:
             name:
-                unique: Ce nom est déjà utilisé !
-            path:
-                not_blank: Le chemin ne peut pas être vide.
+                unique: Ce nom existe déjà.
+                not_blank: Le champs 'Nom de l'enseigne' ne peut pas être vide.
+            street:
+                not_blank: Le champs 'Rue, chemin..' ne peut pas être vide.
+            city:
+                not_blank: Le champs 'Ville' ne peut pas être vide.
+            zipcode:
+                not_blank: Le champs 'Code postal' ne peut pas être vide.
+            phoneNumber:
+                unique: Ce numéro de téléphone est déjà utilisé.
+                not_blank: Le champs 'Numéro de téléphone' ne peut pas être vide.
+            latitude:
+                not_blank: La latitude doit obligatoirement être spécifiée.
+            longitude:
+                not_blank: La longitude doit obligatoirement être spécifiée.

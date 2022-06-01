@@ -1,0 +1,18 @@
+asdoria:
+    ui:
+        retailer_group:
+            name:
+                unique: This name already exists.
+                not_blank: The "Retailer's Name" field can not be empty.
+            street:
+                not_blank: The 'Street' field can not be empty.
+            city:
+                not_blank: The 'City' field can not be empty.
+            zipcode:
+                not_blank: The 'Zipcode' field can not be empty.
+            phoneNumber:
+                not_blank: The 'Phone Number' field can not be empty.
+            latitude:
+                not_blank: The latitude must be provided.
+            longitude:
+                not_blank: The longitude must be provided.

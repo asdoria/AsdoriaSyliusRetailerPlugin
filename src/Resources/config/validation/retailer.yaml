@@ -1,0 +1,35 @@
+Asdoria\SyliusRetailerPlugin\Entity\Retailer:
+    constraints:
+        -   Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+                fields: [ name ]
+                groups: [ sylius ]
+                message: 'asdoria.ui.retailer_group.name.unique'
+    properties:
+        name:
+            -   NotBlank:
+                    groups: [ sylius ]
+                    message: 'asdoria.ui.retailer_group.name.not_blank'
+        street:
+            -   NotBlank:
+                    groups: [ sylius ]
+                    message: 'asdoria.ui.retailer_group.street.not_blank'
+        city:
+            -   NotBlank:
+                    groups: [ sylius ]
+                    message: 'asdoria.ui.retailer_group.city.not_blank'
+        postcode:
+            -   NotBlank:
+                    groups: [ sylius ]
+                    message: 'asdoria.ui.retailer_group.zipcode.not_blank'
+        phoneNumber:
+            -   NotBlank:
+                    groups: [ sylius ]
+                    message: 'asdoria.ui.retailer_group.phoneNumber.not_blank'
+        latitude:
+            -   NotBlank:
+                    groups: [ sylius ]
+                    message: 'asdoria.ui.retailer_group.latitude.not_blank'
+        longitude:
+            -   NotBlank:
+                    groups: [ sylius ]
+                    message: 'asdoria.ui.retailer_group.longitude.not_blank'
