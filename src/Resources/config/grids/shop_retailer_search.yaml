@@ -1,0 +1,41 @@
+sylius_grid:
+    grids:
+        asdoria_shop_retailer_search:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%asdoria.model.retailer.class%"
+            fields:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: name
+                code:
+                    type: string
+                    label: sylius.ui.code
+                    sortable: code
+                city:
+                    type: string
+                    label: sylius.ui.city
+                    sortable: city
+                postcode:
+                    type: string
+                    label: sylius.ui.postcode
+                    sortable: postcode
+                country_code:
+                    type: string
+                    label: sylius.ui.country
+                    sortable: country
+                phonenumber:
+                    type: string
+                    label: asdoria.form.retailer.phonenumber
+                    sortable: phonenumber
+            filters:
+                search:
+                    type: shop_string
+                    label: false
+                    options:
+                        fields: [name, postcode, city]
+                    form_options:
+                        type: contains
+

@@ -1,0 +1,11 @@
+asdoria_shop_ajax_retailers_group_index:
+    path: /retailers_group/search
+    methods: [GET]
+    defaults:
+        _controller: asdoria.controller.retailer::indexAction
+        _format: json
+        _sylius:
+            permission: true
+            repository:
+                method: findBy
+                arguments: [name: $name]
