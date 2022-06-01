@@ -31,6 +31,23 @@ class Retailer implements RetailerInterface
     protected ?float $latitude = null;
     protected ?float $longitude = null;
     protected ?int $distance = null;
+    protected ?string $phoneNumber = null;
+
+    /**
+     * @return string|null
+     */
+    public function getPhoneNumber(): ?string
+    {
+        return $this->phoneNumber;
+    }
+
+    /**
+     * @param string|null $phoneNumber
+     */
+    public function setPhoneNumber(?string $phoneNumber): void
+    {
+        $this->phoneNumber = $phoneNumber;
+    }
 
     /**
      * @return string|null
@@ -142,5 +159,10 @@ class Retailer implements RetailerInterface
     public function setDistance(?int $distance): void
     {
         $this->distance = $distance;
+    }
+
+    public function getPath(): ?string
+    {
+        return $this->getRetailerGroup()->getPath();
     }
 }

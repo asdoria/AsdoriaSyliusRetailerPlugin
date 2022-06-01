@@ -1,12 +1,9 @@
 asdoria_shop_ajax_retailer_index:
-    path: /{postCode}
+    path: /retailers/search
     methods: [GET]
     defaults:
         _controller: asdoria.controller.retailer::indexAction
         _format: json
         _sylius:
-            serialization_groups: [Autocomplete, Detailed]
-            permission: true
-            repository:
-                method: findBy
-                arguments: [postcode: $postCode]
+            serialization_groups: [Autocomplete, Default]
+            grid: asdoria_shop_retailer_search

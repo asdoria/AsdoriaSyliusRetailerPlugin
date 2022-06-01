@@ -1,20 +1,19 @@
 <template>
     <div class="ui action input">
         <input id="retailerAddress" type="text" placeholder="Adresse, Ville, CP" v-model="userInput">
-        <button class="ui button" @click="search">Trouver un magasin</button>
+        <button class="ui button blue" @click="search">Trouver un magasin</button>
     </div>
 </template>
 
 <script>
-import { useStore } from 'vuex';
+import {useStore} from 'vuex';
 import axios from 'axios';
-import { ref, watch, provide, inject } from 'vue';
+import {ref, watch, provide, inject} from 'vue';
 
 export default {
     name: "TheSearch",
     setup() {
         const routeAjax = inject('ajaxRoute');
-        const searchResults = inject('searchResults');
         const store = useStore();
 
         let userInput = ref(null);
@@ -26,19 +25,25 @@ export default {
 
         async function search(input) {
 
+            store.state.searchResultsLength = 0;
 
             input = userInput.value;
-            const init = {method: 'GET', headers: {'Content-Type': 'application/json'}}
+
+            if (!input) return;
+
             const object = await axios.get(urlRequest, {
                     headers: {
-                        Accept: 'application/json'
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
                     },
                 },
             );
 
-            if (!object.data) return;
+            if (!object.data._embedded.items) return;
 
-            store.state.retailer = Object.assign({}, object.data[0]);
+            store.state.searchResultsLength = object.data._embedded.items.length;
+
+            store.state.retailers = object.data._embedded.items;
         }
 
         return {

@@ -19,6 +19,7 @@ asdoria:
         delete: Supprimer
     form:
         retailer:
+            phonenumber: Numéro de téléphone
             channel: Section
             retailer_group: Enseigne
             latitude: Latitude

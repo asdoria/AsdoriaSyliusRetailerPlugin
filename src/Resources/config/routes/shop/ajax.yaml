@@ -1,3 +1,7 @@
-asdoria_shop_retailer_ajax_retailers:
+asdoria_shop_ajax_retailer_index:
     resource: "ajax/retailer.yaml"
     prefix: /retailers
+
+asdoria_shop_ajax_retailers_group_index:
+    resource: "ajax/retailers_group.yaml"
+    prefix: /retailers_group

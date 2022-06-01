@@ -31,7 +31,14 @@ Asdoria\SyliusRetailerPlugin\Entity\Retailer:
             expose: true
             type: string
             groups: [Default, Detailed]
+        phoneNumber:
+            expose: true
+            type: string
+            groups: [Default, Detailed]
     virtual_properties:
         getName:
             serialized_name: name
+            groups: [Default, Detailed, DetailedCart, Autocomplete]
+        getPath:
+            serialized_name: path
             groups: [Default, Detailed, DetailedCart, Autocomplete]

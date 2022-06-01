@@ -15,6 +15,7 @@
         <field name="latitude" column="latitude" type="float" nullable="true"/>
         <field name="longitude" column="longitude" type="float" nullable="true"/>
         <field name="code" column="code" type="string"/>
+        <field name="phoneNumber" column="phoneNumber" type="string" nullable="true" />
 
         <many-to-one field="retailerGroup" target-entity="Asdoria\SyliusRetailerPlugin\Model\RetailerGroupInterface" inversed-by="retailers">
             <join-columns>

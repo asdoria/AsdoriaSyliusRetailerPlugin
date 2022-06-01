@@ -13,7 +13,8 @@
 
 {% block content %}
     {% set config = {
-        'ajaxRoute' : path('asdoria_shop_ajax_retailer_index', {'postCode': 0}),
+        'ajaxRoute' : path('asdoria_shop_ajax_retailer_index', {'criteria[search][value]': 0}),
+        'imageRoute': 'media/cache/resolve/sylius_small/',
         'default' : {
             'latitude' : 45.564601,
             'longitude' : 5.917781,

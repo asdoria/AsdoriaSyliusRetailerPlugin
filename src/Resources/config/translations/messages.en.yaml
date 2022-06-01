@@ -3,38 +3,39 @@ asdoria:
         admin:
             main:
                 retailers:
-                    header: Magasins
+                    header: Brands
     ui:
-        retailer_groups: Enseignes
-        retailer_group: Enseigne
-        new_retailer_group: Nouvelle enseigne
-        edit_retailer_group: Modifier l'enseigne
-        retailers: Magasins
-        new_retailer: Nouveaux magasins
-        edit_retailer: Modifier le magasin
-        manage_retailers: Gérer les magasins
-        retailer_groups_create: Créer une nouvelle enseigne
-        retailer_create: Ajouter un nouveau magasin
-        edit: Modifier
-        delete: Supprimer
+        retailer_groups: Retailers Group
+        retailer_group: Retailer
+        new_retailer_group: New Retailer Group
+        edit_retailer_group: Edit Retailer Group
+        retailers: Retailers
+        new_retailer: New retailers
+        edit_retailer: Edit the retailer
+        manage_retailers: Manage retailers
+        retailer_groups_create: Create a new retailer
+        retailer_create: Add a new retailer
+        edit: Edit
+        delete: Delete
     form:
         retailer:
+            phonenumber: Phone Number
             channel: Section
-            retailer_group: Enseigne
+            retailer_group: Retailer Group
             latitude: Latitude
             longitude: Longitude
-            name: Nom du magasin
+            name: Retailer's Name
             url: URL
-            product_variants: Variantes de produit
+            product_variants: Product Variants
             mail: E-mail
-            retailer_group_image: Associer une image
+            retailer_group_image: Upload an image
             coords:
-                regex: Cette valeur devrait être une coordonnée GPS
+                regex: This value must be a GPS coordinate.
         retailer_group:
             rating: Note
-            name: Nom de l'enseigne
+            name: Brand's name
         address:
-            street: Rue, chemin..
-            city: Ville
-            postcode: Code postal
-            country: Pays
+            street: Street
+            city: City
+            postcode: Zipcode
+            country: Country

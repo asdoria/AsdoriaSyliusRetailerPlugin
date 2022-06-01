@@ -11,17 +11,10 @@ const el = document.querySelector('#app');
 const store = createStore({
   state() {
     return {
-      retailer: {
-        name: '',
-        street: '',
-        city: '',
-        postcode: '',
-        latitude: '',
-        longitude: '',
-        id: '',
-        retailerGroup: '',
-      },
-      defaultValues: el.dataset.default
+      retailers: [],
+      defaultValues: el.dataset.default,
+      searchResultsLength: 0,
+      centerByClick: 0,
     }
   },
   getters: {

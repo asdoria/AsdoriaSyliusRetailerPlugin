@@ -9,6 +9,8 @@ use Sylius\Bundle\AddressingBundle\Form\Type\CountryCodeChoiceType;
 use Sylius\Bundle\ResourceBundle\Form\EventSubscriber\AddCodeFormSubscriber;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
@@ -53,6 +55,9 @@ class RetailerType extends AbstractResourceType
             ->add('retailerGroup', EntityType::class, [
                 'label' => 'asdoria.form.retailer.retailer_group',
                 'class' => RetailerGroup::class,
+            ])
+            ->add('phoneNumber', TextType::class, [
+                'label' => 'asdoria.form.retailer.phonenumber',
             ]);
     }
 
