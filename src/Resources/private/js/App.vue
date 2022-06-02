@@ -11,7 +11,7 @@
     </div>
 
     <div class="ui ignored info message" v-else>
-        Aucun résultat de recherche !
+        {{ JSON.parse(this.$props.config).emptyResultsMessage }}
     </div>
 </template>
 
@@ -38,6 +38,9 @@ export default {
             imageRoute: JSON.parse(this.config).imageRoute,
             defaultValues: JSON.parse(this.config).default,
             formatPhoneNumber: this.formatPhoneNumber,
+            searchField:  JSON.parse(this.config).searchField,
+            findButton:  JSON.parse(this.config).findButton,
+            emptyResultsMessage:  JSON.parse(this.config).emptyResultsMessage,
         };
     },
     setup(props) {
@@ -69,6 +72,7 @@ export default {
         }
 
         return {
+            ...props,
             store,
             imgRoute,
             imageURL,

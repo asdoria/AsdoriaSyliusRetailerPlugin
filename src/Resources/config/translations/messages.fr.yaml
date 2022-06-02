@@ -3,8 +3,9 @@ asdoria:
         admin:
             main:
                 retailers:
-                    header: Magasins
+                    header: Gestion des magasins
     ui:
+        shop_retailers: Carte des magasins
         retailer_groups: Enseignes
         retailer_group: Enseigne
         new_retailer_group: Nouvelle enseigne

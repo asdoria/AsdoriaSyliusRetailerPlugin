@@ -1,7 +1,7 @@
 <template>
     <div class="ui action input">
-        <input id="retailerAddress" type="text" placeholder="Adresse, Ville, CP" v-model="userInput">
-        <button class="ui button blue" @click="search">Trouver un magasin</button>
+        <input id="retailerAddress" type="text" :placeholder="searchFieldText" v-model="userInput">
+        <button class="ui button blue" @click="search">{{ findButtonText }}</button>
     </div>
 </template>
 
@@ -15,6 +15,9 @@ export default {
     setup() {
         const routeAjax = inject('ajaxRoute');
         const store = useStore();
+
+        const searchFieldText = inject('searchField');
+        const findButtonText = inject('findButton');
 
         let userInput = ref(null);
         let urlRequest = routeAjax.replace('0', userInput.value);
@@ -49,6 +52,8 @@ export default {
         return {
             routeAjax,
             store,
+            searchFieldText,
+            findButtonText,
             userInput,
             urlRequest,
             search,

@@ -1,6 +1,6 @@
 asdoria:
     ui:
-        retailer_group:
+        retailer:
             name:
                 unique: Ce nom existe déjà.
                 not_blank: Le champs 'Nom de l'enseigne' ne peut pas être vide.
@@ -17,3 +17,9 @@ asdoria:
                 not_blank: La latitude doit obligatoirement être spécifiée.
             longitude:
                 not_blank: La longitude doit obligatoirement être spécifiée.
+        retailer_group:
+            name:
+                unique: Ce nom existe déjà.
+                not_blank: Le champs 'Nom de l'enseigne' ne peut pas être vide.
+            image:
+                not_blank: An image must be upload.

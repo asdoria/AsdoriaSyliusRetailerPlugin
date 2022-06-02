@@ -1,6 +1,6 @@
-#Asdoria\SyliusRetailerPlugin\Entity\RetailerGroupImage:
-#    properties:
-#        file:
-#            - NotBlank:
-#                  groups: [sylius]
-#                  message: 'asdoria.ui.retailer_group_image.path.not_blank'
+Asdoria\SyliusRetailerPlugin\Entity\RetailerGroupImage:
+    properties:
+        image:
+            - NotBlank:
+                  groups: [sylius]
+                  message: 'asdoria.ui.retailer_group_image.path.not_blank'

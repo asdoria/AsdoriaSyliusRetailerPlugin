@@ -88,6 +88,13 @@ export default {
             const imageUrl = document.location.origin + '/' + imageRoute;
 
             retailers.forEach((item) => {
+
+                let imagePath = imageUrl + item.path;
+
+                if (item.path === null || item.path === undefined) {
+                    imagePath = undefined;
+                }
+
                 markers.value.push(
                     {
                         id: item.id,
@@ -96,7 +103,7 @@ export default {
                         city: item.city,
                         postcode: item.postcode,
                         phoneNumber: item.phoneNumber,
-                        image: imageUrl + item.path,
+                        image: imagePath,
                         coordinates: [ parseFloat(item.latitude), parseFloat(item.longitude) ]
                     });
             });

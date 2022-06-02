@@ -3,7 +3,7 @@
         :key="marker.id"
         :lat-lng="marker.coordinates"
     >
-        <l-icon ref="icon">
+        <l-icon ref="icon" v-if="marker.image !== undefined">
             <img class="retailer-icon" :src="marker.image" />
         </l-icon>
 
@@ -13,7 +13,7 @@
 
 <script>
 import { LIcon, LMarker, LPopup } from '@vue-leaflet/vue-leaflet';
-import { inject } from 'vue';
+import { onBeforeMount, inject } from 'vue';
 
 export default {
     components: { LIcon, LMarker, LPopup },
