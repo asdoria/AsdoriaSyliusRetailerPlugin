@@ -8,7 +8,7 @@
 
 ## Features
 
-+ Create Retailers Group using your own images
++ Create Major Retailer using your own images
 + Create custom retailers with precise geographical coordinates and contact informations
 + Create your own interactive map with Leaflet to show all your retailers
 
@@ -21,7 +21,7 @@
  Retailers Group and custom retailer creation:
 <div style="max-width: 75%; height: auto; margin: auto">
 
-![Example of retailers group and custom retailer creation](doc/create-retailersgroup-group.gif)
+![Example of major retailer and custom retailer creation](doc/create-retailersgroup-group.gif)
 
 </div>
 
@@ -75,7 +75,7 @@ config = {
 
 ## Usage
 
-1. In the back office, under "Retailers Managment", create a Retailers Group with a unique name.
+1. In the back office, under "Retailers Managment", create a Major Retailer with a unique name.
 2. Click on "Manage retailers", and on "Add a new retailer" button.
 3. Fill the fields, and put unique longitude and latitude.
 4. Access to your map at `/en_US/retailers` (depends on your Sylius locale).
