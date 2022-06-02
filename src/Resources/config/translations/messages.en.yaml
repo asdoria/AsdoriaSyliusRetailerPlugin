@@ -6,7 +6,7 @@ asdoria:
                     header: Retailers Managment
     ui:
         shop_retailers: Retailers Map
-        retailer_groups: Retailers Group
+        retailer_groups: Major Retailer
         retailer_group: Retailer
         new_retailer_group: New Major Retailer
         edit_retailer_group: Edit Major Retailer
