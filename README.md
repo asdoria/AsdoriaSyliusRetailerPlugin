@@ -4,7 +4,7 @@
 
 <h1 align="center">Asdoria Retailer Bundle</h1>
 
-<p align="center">Simply Retailer's Managment into Sylius shop</p>
+<p align="center">Simply Retailer's Managment into Sylius Shop</p>
 
 ## Features
 
