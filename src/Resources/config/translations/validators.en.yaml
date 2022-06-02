@@ -20,5 +20,3 @@ asdoria:
             name:
                 unique: This name already exists.
                 not_blank: The "Retailer's Name" field can not be empty.
-            image:
-                not_blank: An image must be upload.

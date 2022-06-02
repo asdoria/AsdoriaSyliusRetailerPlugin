@@ -21,5 +21,3 @@ asdoria:
             name:
                 unique: Ce nom existe déjà.
                 not_blank: Le champs 'Nom de l'enseigne' ne peut pas être vide.
-            image:
-                not_blank: An image must be upload.
