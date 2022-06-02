@@ -57,7 +57,7 @@ imports:
 
 5. run `php bin/console do:mi:mi` to update the database schema
 
-6. Update your defaults settings in `@AsdoriaSyliusRetailerPlugin/Resources/views/Shop/Retailer/index.html.twig` :
+6. Edit your defaults settings in `@AsdoriaSyliusRetailerPlugin/Resources/views/Shop/Retailer/index.html.twig` :
 ```
 config = {
     'ajaxRoute' : path('asdoria_shop_ajax_retailer_index', {'criteria[search][value]': 0}),
