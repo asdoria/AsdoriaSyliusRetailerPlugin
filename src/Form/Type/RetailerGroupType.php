@@ -26,6 +26,7 @@ class RetailerGroupType extends AbstractResourceType
                 'label' => 'asdoria.form.retailer_group.name'
                 ])
             ->add('image', RetailerGroupImageType::class,
+                [ 'required' => false ]
             )
         ;
     }

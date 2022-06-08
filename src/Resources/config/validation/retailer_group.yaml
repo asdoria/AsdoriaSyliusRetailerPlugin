@@ -9,6 +9,4 @@ Asdoria\SyliusRetailerPlugin\Entity\RetailerGroup:
             - NotBlank:
                   groups: [sylius]
                   message: 'asdoria.ui.retailer_group.name.not_blank'
-        image:
-             - Valid:
-                   groups: [sylius]
+
