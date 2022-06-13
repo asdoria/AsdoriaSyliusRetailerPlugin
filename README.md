@@ -46,7 +46,6 @@ Sylius\Bundle\GridBundle\SyliusGridBundle::class => ['all' => true],
 ```yaml
 asdoria_retailer:
     resource: "@AsdoriaSyliusRetailerPlugin/Resources/config/routing.yaml"
-    prefix: /admin
 ```
 
 4. Import config in `config/packages/_sylius.yaml`
