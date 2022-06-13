@@ -1,0 +1,42 @@
+asdoria:
+    menu:
+        admin:
+            main:
+                retailers:
+                    header: Retailers Managment
+    ui:
+        shop_retailers: Retailers Map
+        retailer_groups: Major Retailer
+        retailer_group: Retailer
+        new_retailer_group: New Major Retailer
+        edit_retailer_group: Edit Major Retailer
+        retailers: Retailers
+        new_retailer: New retailers
+        edit_retailer: Edit the retailer
+        manage_retailers: Manage retailers
+        retailer_groups_create: Create a new retailer
+        retailer_create: Add a new retailer
+        edit: Edit
+        delete: Delete
+    form:
+        retailer:
+            phonenumber: Phone Number
+            channel: Section
+            retailer_group: Major Retailer
+            latitude: Latitude
+            longitude: Longitude
+            name: Retailer's Name
+            url: URL
+            product_variants: Product Variants
+            mail: E-mail
+            retailer_group_image: Upload an image
+            coords:
+                regex: This value must be a GPS coordinate.
+        retailer_group:
+            rating: Note
+            name: Name
+        address:
+            street: Street
+            city: City
+            postcode: Zipcode
+            country: Country
