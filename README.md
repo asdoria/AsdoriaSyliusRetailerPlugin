@@ -71,6 +71,16 @@ config = {
 }
  ```
 
+## Demo
+
+You can see the result for the user here with a cap: [here](https://demo-sylius.asdoria.fr/en_US/retailers). <br>
+If you want to try to create retailers, go on [the admin authentication page](https://demo-sylius.asdoria.fr/admin/) and connect with:
+> **Login:** asdoria <br>
+> **Password:** asdoria
+
+ Then go on ["Retailers Managment" in the back office](https://demo-sylius.asdoria.fr/admin/retailer-groups/) and follow usage lines below.
+
+Note that we have developed several other open source plugins for Sylius, whose demos and documentation are listed on the [following page](https://asdoria.github.io/).
 
 ## Usage
 
