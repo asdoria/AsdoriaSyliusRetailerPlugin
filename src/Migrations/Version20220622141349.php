@@ -20,6 +20,7 @@ final class Version20220622141349 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
+        if (!$schema->getTable('asdoria_retailer_group')->hasColumn('rating')) return;
         $this->addSql('ALTER TABLE asdoria_retailer_group DROP rating');
     }
 

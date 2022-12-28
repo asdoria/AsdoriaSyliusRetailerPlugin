@@ -2,7 +2,7 @@ asdoria_admin_retailer_group_retailers_index:
     path: /{retailerGroupId}/retailers
     methods: [GET]
     defaults:
-        _controller: asdoria.controller.retailer:indexAction
+        _controller: asdoria.controller.retailer::indexAction
         _sylius:
             grid: asdoria_admin_retailer_group_retailers
             vars:
@@ -19,7 +19,7 @@ asdoria_admin_retailer_group_retailers_create:
     path: /{retailerGroupId}/retailers/new
     methods: [GET, POST]
     defaults:
-        _controller: asdoria.controller.retailer:createAction
+        _controller: asdoria.controller.retailer::createAction
         _sylius:
             redirect:
                 route: asdoria_admin_retailer_group_retailers_index
@@ -50,7 +50,7 @@ asdoria_admin_retailer_group_retailers_update:
     path: /{retailerGroupId}/retailers/{id}/edit
     methods: [GET, PUT]
     defaults:
-        _controller: asdoria.controller.retailer:updateAction
+        _controller: asdoria.controller.retailer::updateAction
         _sylius:
             redirect:
                 route: asdoria_admin_retailer_group_retailers_index
@@ -77,7 +77,7 @@ asdoria_admin_retailer_group_retailers_delete:
     path: /{retailerGroupId}/retailers/{id}
     methods: [DELETE]
     defaults:
-        _controller: asdoria.controller.retailer:deleteAction
+        _controller: asdoria.controller.retailer::deleteAction
         _sylius:
             redirect:
                 route: asdoria_admin_retailer_group_retailers_index
